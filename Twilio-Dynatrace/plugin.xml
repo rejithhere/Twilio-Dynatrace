@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<!-- plugin.xml file written by Dynatrace Client 6.5.0 -->
+<plugin>
+  <extension point="com.dynatrace.diagnostics.pdk.pluginconfig" id="com.jkvine.dynatrace.Twilio" name="Twilio SMS Notification ">
+    <information>
+      <category value="" />
+      <displayname value="Twilio SMS Notification " />
+      <description value="Plug-in to integrate Dynatrace AppMon with Twilio SMS Gateway " />
+      <supportlevel value="unsupported" />
+    </information>
+    <configuration>
+      <property key="ACCOUNT_SID " label="ACCOUNT_SID " type="string" description="Enter your Twilio account SID here" default="default" multiline="false" />
+      <property key="AUTH_TOKEN" label="AUTH_TOKEN" type="password" description="Enter your Twilio account Auth Token here" default="" />
+      <property key="from_PHONE_NUM" label="FROM_PHONENUMBER" type="string" description="Enter your Twilio phone number here" default="default" multiline="false" />
+      <property key="t_PHONE_NUM" label="TO_PHONE_NUMBER" type="string" description="Enter your Twilio verified receipient numbers here" default="default" multiline="false" />
+    </configuration>
+  </extension>
+  <extension point="com.dynatrace.diagnostics.pdk.action" id="com.jkvine.dynatrace.Twilio.action" name="Dynatrace Twilio Plug-In">
+    <plugin configid="com.jkvine.dynatrace.Twilio" class="com.mycompany.myplugin.MyPlugin" />
+  </extension>
+</plugin>
